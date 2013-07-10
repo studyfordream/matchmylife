@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="extension_title">Biorhythm</string>
+    <string name="extension_description">Displays information about your daily biorhythm.</string>
+    <string name="app_name">Match My Life</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_dashclock_settings">Biorhythm Extension Settings</string>
+    <string name="title_page_dashclock_settings">Selector</string>
+    <string name="title_activity_bio_matcher">Match My Life</string>
+    <string name="button_match">Match!</string>
+    <string name="title_activity_bio_match_result">Match Result</string>
+    <string name="you_match_for">You match for:</string>
+    <string name="physical_match">Physical match:</string>
+    <string name="emotional_match">Emotional match:</string>
+    <string name="intellectual_match">Intellectual match:</string>
+    <string name="menu_rate_and_review">Feedback</string>
+    <string name="menu_rate_and_review_short">Feedback</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_algorithm_title">Matching algorithm</string>
+    <string name="pref_algorithm">pref_algorithm</string>
+    <string name="pref_algorithm_text">The algorithm to use for BioMatching</string>
+    <string name="pref_algorithm_default">SUMMED_MAX</string>
+    <string name="title_result_page_overview">Overview</string>
+    <string name="title_result_page_graph">Graph</string>
+    <string name="title_page_match_setup">Match</string>
+    <string name="title_page_profiles">Profiles</string>
+    <string name="title_page_biorhythm">Biorhythm</string>
+    <string name="physical">Physical</string>
+    <string name="emotional">Emotional</string>
+    <string name="intellectual">Intellectual</string>
+    <string name="add_profile">Add</string>
+    <string name="edit_profile_dialog_title">Edit profile</string>
+    <string name="welcome_dialog_title">Welcome</string>
+    <string name="welcome_dialog_content">Welcome to Match My Life!\n\nThis application calculates your love match using profiles.\n\nPress OK to create your first profile.</string>
+    <string name="name">Name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="match">Match:</string>
+    <string name="with">with:</string>
+    <string name="names_prefix">Match for</string>
+    <string name="and">and</string>
+    <string name="share">Share</string>
+    <string name="share_text">Hey there! I used Match My Life to calculate our love match! You can get your own copy here: https://play.google.com/store/apps/details?id=com.spacemangames.biomatcher</string>
+    <string name="overall">Overall</string>
+    <string name="title_activity_dash_clock_settings">title_dashclock_settings</string>
+    <string name="dashclock_profile_selection_text">Show biorhythm for</string>
+
+</resources>

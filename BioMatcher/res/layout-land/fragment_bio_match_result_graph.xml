@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <com.spacemangames.biomatcher.view.NameCompound
+        android:id="@+id/NameCompound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.spacemangames.biomatcher.view.BioMatchResultGraph
+        android:id="@+id/graph"
+        style="@style/graphstyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NameCompound"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="5dp" />
+
+    <com.spacemangames.biomatcher.view.GraphLegendCompound_
+        android:id="@+id/legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/graph"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

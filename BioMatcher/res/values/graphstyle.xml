@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res/com.spacemangames.biomatcher" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="graphstyle">
+        <item name="backgroundColor">#00000000</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="emotionalColor">@color/emotional</item>
+        <item name="graphBackgroundColor">#00000000</item>
+        <item name="intellectualColor">@color/intellectual</item>
+        <item name="linethickness">2dp</item>
+        <item name="daytextsize">10dp</item>
+        <item name="monthtextsize">10dp</item>
+        <item name="physicalColor">@color/physical</item>
+        <item name="todayColor">#11ffffff</item>
+    </style>
+
+</resources>

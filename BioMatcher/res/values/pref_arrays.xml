@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_algorithms">
+        <item>Summed maximum</item>
+        <item>Phase difference</item>
+    </string-array>
+    <string-array name="pref_algorithms_values">
+        <item>SUMMED_MAX</item>
+        <item>PHASE_DIFF</item>
+    </string-array>
+    
+</resources>

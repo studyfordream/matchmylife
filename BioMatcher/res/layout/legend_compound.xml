@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TextViewPhysicalColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@color/physical"
+            android:width="10dp" />
+
+        <TextView
+            android:id="@+id/TextViewPhysical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextViewPhysicalColor"
+            android:layout_toRightOf="@+id/TextViewPhysicalColor"
+            android:text="@string/physical" />
+
+        <TextView
+            android:id="@+id/TextViewEmotionalColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextViewPhysical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/TextViewPhysical"
+            android:background="@color/emotional"
+            android:width="10dp" />
+
+        <TextView
+            android:id="@+id/TextViewEmotional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextViewEmotionalColor"
+            android:layout_toRightOf="@+id/TextViewEmotionalColor"
+            android:text="@string/emotional" />
+
+        <TextView
+            android:id="@+id/TextViewIntellectualColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextViewEmotional"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/TextViewEmotional"
+            android:background="@color/intellectual"
+            android:width="10dp" />
+
+        <TextView
+            android:id="@+id/TextViewIntellectual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TextViewIntellectualColor"
+            android:layout_toRightOf="@+id/TextViewIntellectualColor"
+            android:text="@string/intellectual" />
+</merge>

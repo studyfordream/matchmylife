@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <com.spacemangames.biomatcher.view.ProfileSpinner
+            android:id="@+id/spinner1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.spacemangames.biomatcher.view.ProfileSpinner
+            android:id="@+id/spinner2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/resultFragment"
+            android:name="com.spacemangames.biomatcher.BioMatchResultCombinedFragment_"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </fragment>
+    </LinearLayout>
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        ads:adSize="IAB_BANNER"
+        ads:adUnitId="a1511f79ed1013d"
+        ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR, 2738607433467FDDD2B10163D990695E" />
+
+</LinearLayout>

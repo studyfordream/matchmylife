@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="BioMatchResultGraph">
+        <attr name="baselineColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="graphBackgroundColor" format="color" />
+        <attr name="todayColor" format="color" />
+        <attr name="physicalColor" format="color" />
+        <attr name="emotionalColor" format="color" />
+        <attr name="intellectualColor" format="color" />
+        <attr name="linethickness" format="dimension" />
+        <attr name="daytextsize" format="dimension" />
+        <attr name="monthtextsize" format="dimension" />
+        <attr name="textcolor" format="color" />
+        <attr name="daysinview" format="integer" />
+    </declare-styleable>
+</resources>

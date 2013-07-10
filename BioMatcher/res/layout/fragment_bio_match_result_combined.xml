@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.spacemangames.biomatcher.view.NameCompound
+                    android:id="@+id/NameCompound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <com.spacemangames.biomatcher.view.PercentageOverallCompound_
+                    android:id="@+id/overallPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.spacemangames.biomatcher.view.PercentagePhysicalCompound_
+                    android:id="@+id/physicalPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.spacemangames.biomatcher.view.PercentageEmotionalCompound_
+                    android:id="@+id/emotionalPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.spacemangames.biomatcher.view.PercentageIntellectualCompound_
+                    android:id="@+id/intellectualPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.spacemangames.biomatcher.view.BioMatchResultGraph
+            android:id="@+id/graph"
+            style="@style/graphstyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

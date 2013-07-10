@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <com.spacemangames.biomatcher.view.NameCompound
+        android:id="@+id/NameCompound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.spacemangames.biomatcher.view.BioMatchResultGraph
+        android:id="@+id/graph"
+        style="@style/graphstyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NameCompound"
+        android:layout_marginTop="5dp" />
+
+    <com.spacemangames.biomatcher.view.GraphLegendCompound_
+        android:id="@+id/legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/graph"
+        android:layout_below="@+id/graph" />
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="a1511f79ed1013d"
+        ads:loadAdOnCreate="true"
+        ads:testDevices="TEST_EMULATOR, 43F38DFF2DC2945ADEE9D75EE4623569" />
+
+</RelativeLayout>

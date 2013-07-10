@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spacemangames.biomatcher"
+    android:versionCode="22"
+    android:versionName="1.6.4" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.spacemangames.biomatcher.BioMatcherActivity_"
+            android:label="@string/title_activity_bio_matcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.spacemangames.biomatcher.BioMatcherMatchResultActivity_"
+            android:label="@string/title_activity_bio_match_result" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spacemangames.biomatcher.BioMatcherActivity_" />
+        </activity>
+        <activity
+            android:name="com.spacemangames.biomatcher.SettingsActivity_"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.spacemangames.biomatcher.DashClockSettingsActivity_"
+            android:exported="true"
+            android:label="@string/title_dashclock_settings" />
+
+        <service
+            android:name="com.spacemangames.biomatcher.BioRhythmDashClockService_"
+            android:icon="@drawable/dashclock_icon"
+            android:label="@string/extension_title"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="1" />
+            <meta-data
+                android:name="description"
+                android:value="@string/extension_description" />
+            <meta-data
+                android:name="settingsActivity"
+                android:value="com.spacemangames.biomatcher.DashClockSettingsActivity_" />
+        </service>
+
+        <activity
+            android:name="com.spacemangames.biomatcher.DashClockSettingsActivity"
+            android:label="@string/title_activity_dash_clock_settings" >
+        </activity>
+    </application>
+
+</manifest>
