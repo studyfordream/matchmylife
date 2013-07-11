@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -39,15 +38,4 @@
             android:layout_height="fill_parent" >
         </fragment>
     </LinearLayout>
-
-    <com.google.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        ads:adSize="IAB_BANNER"
-        ads:adUnitId="a1511f79ed1013d"
-        ads:loadAdOnCreate="true"
-        ads:testDevices="TEST_EMULATOR, 2738607433467FDDD2B10163D990695E" />
-
 </LinearLayout>
