@@ -27,8 +27,8 @@ public class GraphAttributeHandler {
     private Paint              emotionalPaint;
     private Paint              intellectualPaint;
     private Paint              baseLinePaint;
-    private static final float DAYLINE_STROKE_WIDTH  = 0.5f;
-    private static final float BASELINE_STROKE_WIDTH = 0.7f;
+    private static final float DAYLINE_STROKE_WIDTH  = 1f;
+    private static final float BASELINE_STROKE_WIDTH = 1f;
 
     public GraphAttributeHandler() {
         this.backgroundColor = Color.TRANSPARENT;
