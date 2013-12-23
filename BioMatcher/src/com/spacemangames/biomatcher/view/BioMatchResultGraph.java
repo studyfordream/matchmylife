@@ -43,8 +43,7 @@ public class BioMatchResultGraph extends Graph {
         int width = getWidth();
         int height = getHeight();
 
-        long leftTimestamp = (originDate.getTimeInMillis() - (attributes.getDaysInView() / 2) * DateUtils.DAY_MILLIS - (long) (touchEventHandler
-                .getOffsetX() * timePerPixel));
+        long leftTimestamp = (originDate.getTimeInMillis() - (attributes.getDaysInView() / 2) * DateUtils.DAY_MILLIS - (long) (getOffsetX() * timePerPixel));
         leftDate.setTimeInMillis(leftTimestamp);
 
         super.onDraw(canvas);

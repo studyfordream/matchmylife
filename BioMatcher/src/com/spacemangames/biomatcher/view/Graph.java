@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -28,7 +29,11 @@ public class Graph extends View {
     protected final Calendar        leftDate   = new GregorianCalendar();
     @SuppressLint("SimpleDateFormat")
     private final DateFormat        format     = new SimpleDateFormat("MMMM");
-    protected TouchEventHandler     touchEventHandler;
+
+    private TouchEventHandler       touchEventHandler;
+    private GestureDetector         gestureDetector;
+
+    private float                   offsetX;
 
     public Graph(Context context) {
         super(context);
@@ -46,6 +51,7 @@ public class Graph extends View {
         attributes = new GraphAttributeHandler(getContext(), attrs, defStyle);
 
         touchEventHandler = new TouchEventHandler(this);
+        gestureDetector = new GestureDetector(getContext(), touchEventHandler);
 
         invalidateTextPaintAndMeasurements();
     }
@@ -59,12 +65,9 @@ public class Graph extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (touchEventHandler.onTouch(event)) {
-            getParent().requestDisallowInterceptTouchEvent(true);
-            return true;
-        } else {
-            return super.onTouchEvent(event);
-        }
+        gestureDetector.onTouchEvent(event);
+        getParent().requestDisallowInterceptTouchEvent(true);
+        return true;
     }
 
     protected void onDrawGraphBackground(Canvas canvas, int width, int height) {
@@ -149,4 +152,12 @@ public class Graph extends View {
         timePerPixel = (long) (DateUtils.DAY_MILLIS / pixelsPerDay);
     }
 
+    public void scroll(float distanceX) {
+        this.offsetX -= distanceX;
+        invalidate();
+    }
+
+    protected float getOffsetX() {
+        return offsetX;
+    }
 }
