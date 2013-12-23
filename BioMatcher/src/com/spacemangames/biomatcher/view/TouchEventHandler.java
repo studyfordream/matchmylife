@@ -17,7 +17,8 @@ public class TouchEventHandler implements OnGestureListener {
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        return false;
+        view.fling(velocityX);
+        return true;
     }
 
     @Override

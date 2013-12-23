@@ -14,26 +14,29 @@ import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Scroller;
 
 import com.spacemangames.biomatcher.util.DateUtils;
 
 public class Graph extends View {
 
+    private static final int        FLING_FRAMERATE = 30;
     protected GraphAttributeHandler attributes;
     private float                   monthTextPaddingBottom;
     private float                   dayTextOffsetBottom;
     protected int                   graphBottomOffset;
     private float                   pixelsPerDay;
     protected long                  timePerPixel;
-    protected final Calendar        originDate = new GregorianCalendar();
-    protected final Calendar        leftDate   = new GregorianCalendar();
+    protected final Calendar        originDate      = new GregorianCalendar();
+    protected final Calendar        leftDate        = new GregorianCalendar();
     @SuppressLint("SimpleDateFormat")
-    private final DateFormat        format     = new SimpleDateFormat("MMMM");
+    private final DateFormat        format          = new SimpleDateFormat("MMMM");
 
     private TouchEventHandler       touchEventHandler;
     private GestureDetector         gestureDetector;
 
     private float                   offsetX;
+    private Scroller                scroller;
 
     public Graph(Context context) {
         super(context);
@@ -52,6 +55,8 @@ public class Graph extends View {
 
         touchEventHandler = new TouchEventHandler(this);
         gestureDetector = new GestureDetector(getContext(), touchEventHandler);
+
+        scroller = new Scroller(getContext());
 
         invalidateTextPaintAndMeasurements();
     }
@@ -109,6 +114,11 @@ public class Graph extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        if (scroller.computeScrollOffset()) {
+            offsetX = scroller.getCurrX();
+            postInvalidateDelayed(FLING_FRAMERATE);
+        }
+
         int width = getWidth();
         int height = getHeight();
 
@@ -153,11 +163,18 @@ public class Graph extends View {
     }
 
     public void scroll(float distanceX) {
+        scroller.forceFinished(true);
         this.offsetX -= distanceX;
         invalidate();
     }
 
     protected float getOffsetX() {
         return offsetX;
+    }
+
+    public void fling(float velocityX) {
+        scroller.forceFinished(true);
+        scroller.fling((int) offsetX, 0, (int) velocityX, 0, Integer.MIN_VALUE, Integer.MAX_VALUE, 0, 0);
+        invalidate();
     }
 }
